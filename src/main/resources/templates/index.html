@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{style.css}">
+    <title>Products</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <div th:each="post : ${products}">
+        <h4 th:text="${post.getProductName()}"></h4>
+        <a th:href="@{/content/{id} (id=${post.getId()})}">More Information</a>
+    </div>
+    <a th:href="@{/addProduct}">Add New Product</a>
+</body>
+</html>
