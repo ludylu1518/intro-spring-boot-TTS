@@ -5,3 +5,17 @@
 body {
     background-color: lightpink;
 }
+
+div {
+	margin-bottom: 70px;
+}
+
+.products {
+	display: flex;
+	flex-direction: row;
+	background-color: pink;
+}
+
+.products div {
+	margin-right: 50px;
+}

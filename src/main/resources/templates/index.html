@@ -8,9 +8,11 @@
 </head>
 <body>
     <h1>Welcome</h1>
-    <div th:each="post : ${products}">
-        <h4 th:text="${post.getProductName()}"></h4>
-        <a th:href="@{/content/{id} (id=${post.getId()})}">More Information</a>
+    <div class="products">
+        <div th:each="post : ${products}">
+            <h4 th:text="${post.getProductName()}"></h4>
+            <a th:href="@{/content/{id} (id=${post.getId()})}">More Information</a>
+        </div>
     </div>
     <a th:href="@{/addProduct}">Add New Product</a>
 </body>
